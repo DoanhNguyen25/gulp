@@ -1,0 +1,253 @@
+// -------------------form login-------------------
+%placeholder{
+    transform: translateY(-5rem) translateX(-3.5rem) scale(0.6);
+    color: gray;
+    @include minWidth(410px){
+        transform: translateY(-5rem) translateX(-4rem) scale(0.6);
+    }
+    @include minWidth(470px){
+        transform: translateY(-5rem) translateX(-5rem) scale(0.6)
+    }
+    @include minWidth(550px){
+        transform: translateY(-5rem) translateX(-6rem) scale(0.6)
+    }
+
+}
+.form{
+    padding:2rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 2rem;
+    span {
+        > a{
+            // text-decoration: none;
+            color: #ffff;
+            display: block;
+            transform: translateX(16.75rem);
+            margin-bottom: 2rem; 
+            @include minWidth (410px){
+                transform: translateX(18.75rem);
+            }
+            @include minWidth(470px){
+                transform: translateX(23.75rem);
+            }
+            @include minWidth(549px){
+                transform: translateX(28.75rem);
+            }
+
+        }
+    }
+    &--text-deco{
+        color: gray;
+        font-size: 2rem;
+        position: absolute;
+        top: 22.75rem;
+        left: 12.5rem;
+        z-index: 9999;
+        @include minWidth (410px){
+            left: 13.5rem;
+        }
+        @include minWidth (470px){
+            left: 16rem;
+        }
+        @include minWidth (550px){
+            left: 18.5rem;
+        }
+    }
+    &__group{
+        transition: all .3s;
+    }
+    &--lable{
+        display: block;
+        font-size: 1.5rem;
+        color: #000;
+        transform: translateY(-3rem) translateX(1.5rem);
+        transition: all .3s;
+    }
+    &--control{
+        padding: 1.5rem;
+        border-color: #aaa;
+        border-style: none none solid none;
+        outline: none;
+        width: 100%;
+        transition: all .5s;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        &::placeholder{
+            color: transparent;
+        }
+        &:focus{
+            +.form--lable{
+                @extend %placeholder;
+            }
+        }
+        &:not(:placeholder-shown){
+            +.form--label{
+                @extend %placeholder
+            }
+        }
+    }
+    .line{
+        /* width: 100%;
+        height: 1px; */
+        background-color: gray;
+        margin-bottom: 5rem;
+        position: relative;
+        &::before{
+            content:"";
+            width: 35%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: 0rem;
+            background-color: gray;
+            border-radius:0.5rem;
+            opacity: 0.5;
+        }
+        &::after{
+            content: "";
+            width: 35%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0.5rem;
+            background-color: gray;
+            opacity: 0.5;
+        }
+    }
+}
+
+//------------ form register---------------
+.formRegister{
+    padding:3.5rem 1.5rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 2rem;
+    @include minWidth(770px){
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+    }
+    &__group{
+        transition: all .3s;
+        &-1{
+            @include minWidth(770px){
+                grid-column:1 / 3;
+            }
+        }
+        &-2{
+            @include minWidth(770px){
+                grid-column:3 / 5;
+            }
+        }
+        &-3{
+            @include minWidth(770px){
+                grid-column:1 / 3;
+            }
+        }
+        &-4{
+            @include minWidth(770px){
+                grid-column:3 / 5;
+            }
+        }
+        &-5{
+            @include minWidth(770px){
+                grid-column:1 / 3;
+            }
+        }
+        &-6{
+            @include minWidth(770px){
+                grid-column:3/ 5;
+            }
+        }
+        &-7{
+            @include minWidth(770px){
+                grid-column:1 / 3;
+            }
+        }
+        &-8{
+            @include minWidth(770px){
+                grid-column:3/ 5;
+            }
+        }
+        &-9{
+            @include minWidth(770px){
+                grid-column:1 / 3;
+            }
+        }
+        &-10{
+            @include minWidth(770px){
+                grid-column:3 / 5;
+            }
+        }
+        &-11{
+
+            .descriptionField{
+                width: 100%;
+                min-height: 6rem;
+                padding:3rem 2.5rem;
+                overflow-y:scroll;
+
+            }
+            
+            @include minWidth(770px){
+                grid-column:1/ 5;
+            }
+        }
+    }
+    &--lable{
+        display: block;
+        font-size:1.5rem;
+        color: #000;
+        transform: translateY(-6.5rem) translateX(2.5rem);
+        transition: all .3s;
+        margin-bottom: 1rem;
+    }
+    &--control{
+        padding: 2.5rem;
+        border-color: #aaa;
+        border-style: none none solid none;
+        outline: none;
+        width: 100%;
+        transition: all .5s;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        &:focus{
+            &::placeholder{
+                transition: all 0.2s;
+                color: transparent;
+            }
+        }
+    } 
+    &__btn{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 1rem;
+        margin-top: 2rem;
+        color: #ffff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 5rem;
+        @include minWidth(770px){
+            grid-column: 1/5;
+            font-size: 2rem;
+        }
+        &--back{
+            background-color: #000;
+            text-align: center;
+            border-radius: 0.2rem;
+            padding: 1.5rem;
+            border: 0.05rem solid gray;
+            outline: none;
+        }
+        &--next{
+            background-color:green;
+            text-align: center;
+            border-radius: 0.2rem;
+            padding: 1.5rem;
+            border: 0.05rem solid gray;
+            outline: none;
+        }
+    }
+    
+}

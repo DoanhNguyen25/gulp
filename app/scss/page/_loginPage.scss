@@ -1,0 +1,76 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background: var(--primary-color);
+    opacity: 0.8; */
+    position: relative;
+    overflow-x: hidden;
+    background-color: black;
+    overflow-y: auto;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(5, 5, 5, 0.192)), to(rgba(11, 12, 12, 0.308))),url(../images/cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .logo{
+        width: 100%;
+        /* height: 5rem; */
+        /* background-color: red; */
+        z-index: 99;
+        margin: 0 auto;
+        text-align: center;
+        transform: translateY(5rem);
+        img{
+            width: 16.3rem;
+        }
+    }
+}
+.signin{
+    width: 28rem;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 17rem auto;
+    position: relative; 
+    &--text{
+        color: #fff;
+        font-size: 3rem;
+        z-index: 9999;
+        font-family: Arial, Helvetica, sans-serif;
+        /* top: -2rem;
+        left: 2rem;
+        position: absolute; */
+        transform: translate(1.5rem, 2rem);
+        display: block;
+    }
+    @include minWidth(410px){
+        width: 30.25rem;
+        margin-top: 10rem;
+    }
+    @include minWidth(470px){
+        width: 35.25rem;
+        margin-top: 10rem;
+    }
+    @include minWidth(550px){
+        width: 40rem;
+        margin-top: 10rem;
+    }
+}
+
+.utility-1{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+    > a{
+        text-decoration: none;
+        color: red!important;
+    }
+}
+.utility-2{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    > a{
+        text-align: center!important;
+        text-decoration: none;
+        color: white;
+    }
+}
+
