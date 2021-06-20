@@ -44,6 +44,7 @@
         top: 22.75rem;
         left: 12.5rem;
         z-index: 9999;
+        transform: translateY(4.5rem);
         @include minWidth (410px){
             left: 13.5rem;
         }
@@ -76,16 +77,7 @@
         &::placeholder{
             color: transparent;
         }
-        &:focus{
-            +.form--lable{
-                @extend %placeholder;
-            }
-        }
-        &:not(:placeholder-shown){
-            +.form--label{
-                @extend %placeholder
-            }
-        }
+        
     }
     .line{
         /* width: 100%;
@@ -116,6 +108,11 @@
             opacity: 0.5;
         }
     }
+}
+
+.form--control:focus + .form--lable,
+.form--control:not(:placeholder-shown) + .form--lable{
+    @extend %placeholder
 }
 
 //------------ form register---------------

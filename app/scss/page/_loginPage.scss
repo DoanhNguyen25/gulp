@@ -39,6 +39,7 @@
         position: absolute; */
         transform: translate(1.5rem, 2rem);
         display: block;
+        margin-bottom: 3rem;
     }
     @include minWidth(410px){
         width: 30.25rem;
@@ -73,4 +74,21 @@
         color: white;
     }
 }
-
+.signin__notify{
+    max-width: 90%;
+    height: 5rem;
+    margin:2rem auto;
+    background-color: red;
+    display: none;
+    span{
+        text-align: center;
+    font-size: 2rem;
+    line-height: 2.5;
+    display: block;
+    }
+}
+.notify--text{
+    color: red;
+    font-size: 2rem;
+    visibility: hidden;
+}
